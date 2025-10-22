@@ -15,6 +15,8 @@
   <a class="botao" href="paginas/propriedade.php">Propriedades</a>
   <a class="botao" href="paginas/cultura.php">Cultura</a>
   <a class="botao" href="paginas/equip.php">Equipamentos</a>
+
+  <p>alterando</p>
   </div>
 </body>
 </html>
