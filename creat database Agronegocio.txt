@@ -1,0 +1,52 @@
+create database agronegocio;
+
+-----------------------------
+use agronegocio;
+	
+create table propriedade(
+idprod int primary key auto_increment,
+propriedade varchar(40) not null,
+proprietário varchar(60) not null,
+área int not null,
+cultura varchar(60)
+);
+
+create table culturas(
+idcultura int primary key auto_increment,
+cultura varchar(60) not null,
+variedade varchar(60) not null,
+ciclo varchar(20) not null,
+colheita varchar(20) not null
+);
+
+create table equipamentos(
+idequipe int primary key auto_increment,
+equipamento varchar(60) not null,
+localização varchar(50) not null,
+custo decimal(9,2) not null
+);
+
+create table funcionarios(
+idfunc int primary key auto_increment,
+nome varchar(60) not null,
+cargo varchar(50) not null,
+salario decimal(9,2) not null
+);
+
+create table clientes(
+idcli int primary key auto_increment,
+nome varchar(60) not null,
+cpf_cnpj varchar(14) not null,
+telefone varchar(11) not null,
+email varchar(50) not null,
+cidade varchar(80) not null
+);
+
+create table vendas(
+idvenda int primary key auto_increment,
+data_venda date not null,
+idcli int not null,
+produto varchar(100) not null,
+quantidade int not null,
+valortotal decimal(9,2) not null
+);
